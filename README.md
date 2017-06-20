@@ -25,4 +25,4 @@ You can make your SoundCloud Player easily.
 2. Upload 3 files to your server.
 3. Go bgm.html using browser. but add soundcloud playlist url and background image url after bgm.html's address.
 - ex) YourBgm.htmlAddress
-**?url=(SoundCloudPlaylist's URL)&img=(Background Image's URL)**
+**?listurl=(SoundCloudPlaylist's URL)&img=(Background Image's URL)**
