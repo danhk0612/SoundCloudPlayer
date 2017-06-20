@@ -1,0 +1,370 @@
+/* LAYOUT *
+-----------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand+SC');
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  *zoom: 1;
+}
+* {
+  box-sizing: border-box;
+}
+/* COLORS *
+-----------------------------------------------*/
+body {
+  margin: 0;
+  background-color: #4d4d4d;
+  background: url() no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; 
+  background-size: cover;
+  color: #000;
+  text-align: center;
+  font-family: 'Patrick Hand SC', cursive;
+}
+.wrapper {
+  width: 640px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+p.small {
+  font-size: 0.8em;
+}
+a {
+  color: #9c3538;
+}
+a:hover {
+  color: #bf3d3f;
+}
+a.sc-player,
+.button {
+  display: inline-block;
+  background: #bf3d3f;
+  background: rgba(19, 19, 19, 0.14);
+  border-radius: 4px;
+  padding: 1em 1.5em;
+  text-align: center;
+  text-decoration: none;
+  color: #f8f8f8;
+  font-size: 1.5em;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+a.sc-player:hover,
+.button:hover {
+  background: #9c3538;
+  background: rgba(19, 19, 19, 0.24);
+  color: #f8f8f8;
+}
+.main {
+  margin-top: 3em;
+  margin-bottom: 3em;
+  padding: 2em;
+  border: 1px solid #000;
+  background-color: #fff;
+  background-color: rgba( 255, 255, 255, 0.5 );
+}
+.transition {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+/* FONTS *
+-----------------------------------------------*/
+.display {
+  font-family: 'Patrick Hand SC', cursive;
+}
+
+/* SOUNDCLOUD PLAYER *
+-----------------------------------------------*/
+.sc-player {
+  position: relative;
+  margin-bottom: 2em;
+  *zoom: 1;
+}
+.sc-player a {
+  text-decoration: none;
+  color: #000;
+}
+.sc-player ol,
+.sc-player li {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+}
+/* Artworks */
+.sc-player .sc-artwork-list {
+  float: left;
+  width: 150px;
+  height: 150px;
+  border:1px solid #000;
+  background-color: transparent;
+  list-style-type: none;
+  position: relative;
+}
+.sc-player .sc-artwork-list li {
+  list-style-type: none;
+  display: none;
+}
+.sc-player .sc-artwork-list li.active {
+  list-style-type: none;
+  display: block;
+}
+.sc-player .sc-artwork-list li img,
+.sc-player .sc-artwork-list li div {
+  list-style-type: none;
+  width: 100%;
+  height: auto;
+}
+.sc-no-artwork {
+    margin-top:45%;
+}
+/* controls */
+.sc-player .sc-controls {
+    display: block;
+    left: -212px;
+    position: relative;
+}
+.sc-player .sc-controls a {
+  text-indent: -9999px;
+  content: '';
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  position: relative;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.sc-player .sc-controls a:hover {
+  background: rgba(19, 19, 19, 0.8);
+}
+.sc-player .sc-controls a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  left: 50%;
+  margin-left: -50px;
+  z-index: 1;
+  background: url('http://nicholaspetersen.is/wp-content/themes/v3/images/play.png');
+  opacity:0.7!important;
+  filter:alpha(opacity=70);
+  background-position: top;
+  background-size: 100px auto;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.sc-player .sc-controls a.sc-pause:after {
+  background-position: bottom;
+}
+.sc-scrubber .sc-time-indicators {
+  background: #9c3538;
+  background: rgba(19, 19, 19, 0);
+  color: #000;
+  border-radius: 4px;
+  padding: 7px;
+  text-align: right;
+}
+.sc-player .sc-controls a.sc-pause {
+  display: none;
+}
+.sc-player.playing .sc-controls a.sc-play {
+  display: none;
+}
+.sc-player.playing .sc-controls a.sc-pause {
+  display: block;
+}
+/* scrubber */
+.sc-scrubber {
+  position: relative;
+  float: right;
+  width: 100%;
+  margin: 0.5em 0;
+  border-radius: 4px;
+}
+
+.sc-scrubber .sc-time-span {
+  height: 50px;
+  position: relative;
+}
+.sc-scrubber .sc-buffer,
+.sc-scrubber .sc-played {
+  height: 100px;
+  position: absolute;
+  top: 0;
+}
+.sc-scrubber .sc-time-indicators {
+  position: absolute;
+  right: 0;
+  top: -48px;
+}
+.sc-scrubber .sc-time-span {
+  border-radius: 4px;
+  overflow: hidden;
+}
+.sc-scrubber .sc-volume-slider {
+  background-color: #bf3d3f;
+  background-color: rgba(19, 19, 19, 0.12);
+  border-radius: 2px;
+}
+.sc-scrubber .sc-volume-slider .sc-volume-status {
+  background-color: #9c3538;
+  background-color: rgba(19, 19, 19, 0.22);
+  border-right: 1px solid #9c3538;
+  border-right: 1px solid rgba(19, 19, 19, 0.22);
+}
+.sc-scrubber .sc-waveform-container {
+  z-index: 800;
+  width: 100%;
+  position: absolute;
+}
+.sc-scrubber .sc-time-span img {
+  height: 50px;
+  width: 100%;
+  border-radius: 4px;
+}
+.sc-scrubber .sc-buffer {
+  background: #bf3d3f;
+  background: rgba(19, 19, 19, 0.12);
+  z-index: 1;
+  position: absolute;
+}
+.sc-scrubber .sc-played {
+  background: #9c3538;
+  background: rgba(19, 19, 19, 0.22);
+  z-index: 799;
+}
+/* volume control */
+.sc-volume-slider {
+  top: -35px;
+  left: 0px;
+  position: absolute;
+  width: 150px;
+  height: 20px;
+  background-color: white;
+}
+.sc-volume-slider .sc-volume-status {
+  position: absolute;
+  width: 0%;
+  height: 20px;
+  top: 0;
+  left: 0;
+}
+/* tracks */
+/* Track listings*/
+.sc-player ol.sc-trackslist {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  overflow-y: scroll;
+  top: 10px;
+}
+.sc-player ol.sc-trackslist li {
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 0.5em;
+  padding: 1%;
+  background: #bf3d3f;
+  background: rgba(19, 19, 19, 0.12);
+  color: #000;
+  border-radius: 4px;
+  -webkit-transition: background 0.3s ease-in;
+  transition: background 0.3s ease-in;
+  text-align: left;
+}
+
+.sc-player ol.sc-trackslist li:last-child {
+  margin-bottom: 0;
+}
+.sc-player ol.sc-trackslist li a {
+  font-size: 0.95em;
+}
+
+.sc-player ol.sc-trackslist li:hover {
+  background: #9c3538;
+  background: rgba(19, 19, 19, 0.22);
+}
+.sc-player ol.sc-trackslist li.active {
+  background: #9c3538;
+  background: rgba(19, 19, 19, 0.32);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+.sc-player ol.sc-trackslist li.active a {
+  color: #000;
+}
+.sc-track-duration {
+  float: right;
+  margin-top: 0.25em;
+}
+
+/* Track info*/
+.sc-player .sc-info {
+  position: relative;
+  margin-bottom: 3em;
+  padding: 1% 3%;
+  float: right;
+  display: block;
+  width: 380px;
+  height: 150px;
+  overflow-y: scroll;
+}
+
+.sc-player .sc-info h3 {
+  font-size: 1em;
+  margin-top: 0.2em;
+}
+.sc-player .sc-info h4 {
+  display: none;
+}
+.sc-player .sc-info .sc-info a {
+  color: #000;
+}
+p {
+  max-width: 38em;
+  max-width: 38rem;
+  margin: 1em auto 1em;
+  line-height: 1.5;
+  text-align: left;
+}
+.sc-player .sc-info-toggle,
+.sc-player .sc-info-close {
+  display: none;
+}
+/* utilities */
+.sc-player-engine-container {
+  width: 1px;
+  height: 1px;
+  position: fixed;
+  top: 2px;
+  left: 2px;
+}
+.sc-player .sc-info-toggle {
+  background: #22B573;
+  color: #000;
+  border-radius: 4px;
+  padding: 4px;
+}
+.sc-player .sc-info-toggle:hover {
+  background: #333;
+  color: #000;
+}
+.sc-player .sc-info-close {
+  background: #22B573;
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-weight: bold;
+}

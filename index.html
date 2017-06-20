@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".input_click_init").focus(function () {
+                $(this).val('');
+            }).blur(function () {
+                if ($(this).val() == "") { $(this).val(''); }
+            });
+        });
+    </script>
+    <title>SoundCloud Playlist Player</title>
+</head>
+<body>
+    <form action="bgm.html">
+        SoundCloud Playlist URL <input type="text" class="input_click_init" name="url" value="https://soundcloud.com/user-231629548/sets/anime-best-songs"><br>
+        BackgroundImage URL <input type="text" class="input_click_init" name="img" value="http://img1.daumcdn.net/thumb/R960x0/?fname=http%3A%2F%2Fcfile29.uf.tistory.com%2Fimage%2F242192355947C2EB03A518"><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
