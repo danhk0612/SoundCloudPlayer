@@ -15,10 +15,10 @@
         oParamas = getUrlParams();
 
         function modifyValue() {
-            if(oParamas.url==null){
+            if(oParamas.listurl==null){
                 $(".sc-player").attr("href", "https://soundcloud.com/nils_frahm/sets/piano-day-2016-playlist");
             }else{
-                $(".sc-player").attr("href", decodeURIComponent(oParamas.url));
+                $(".sc-player").attr("href", decodeURIComponent(oParamas.listurl));
             }
             if(oParamas.img!=null){
                 $("body").css("background-image", "url('" + decodeURIComponent(oParamas.img) + "')");
