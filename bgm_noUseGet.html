@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bgm.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <SCRIPT>
+        function modifyValue() {
+            var img = '';
+
+            if(img!=null){
+                $("body").css("background-image", "url('" + decodeURIComponent(img) + "')");
+            }            
+        }
+    </SCRIPT> 
+    <script src="player.js"></script>
+    <title>SoundCloud Playlist Player</title>
+</head>
+<body onload="modifyValue();">
+    <section role="main" class="main wrapper">
+        <a href="https://soundcloud.com/nils_frahm/sets/piano-day-2016-playlist" class="sc-player">Can't load scriptfile.<br />Click and Go to listen.</a>
+    </section>
+    Original Source: https://codepen.io/nicholaspetersen/pen/yyVYMY<br />
+    Modified : gorhkd0612@gmail.com
+</body>
+</html>
